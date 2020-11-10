@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@color/colorBackground"
+    >
+
+    <include layout="@layout/layout_main_navigation"/>
+
+    <LinearLayout
+        android:id="@+id/main_navigation_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/primary_material_light"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/main_margin_distances"
+            android:paddingBottom="@dimen/main_margin_distances"
+            android:paddingLeft="@dimen/main_margin_sides"
+            android:paddingRight="@dimen/main_margin_sides"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:text="20 e 21 de Agosto"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="20dp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:text="Escola de Hotelaria e Turismo do Algarve, Faro"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:text="Bem vindo ao maior evento cultural do algarve"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

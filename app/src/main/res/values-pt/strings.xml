@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Definições</string>
+    <string name="readMore">Ver Mais</string>
+    <string name="activity_information_title">Informações</string>
+    <string name="fragment_title_next">Próximo</string>
+    <string name="title_activity_activity_next_fragment">Próximo</string>
+    <string name="title_activity_details">Detalhes</string>
+    <string name="fragment_title_current">A Acontecer</string>
+    <string name="fragment_title_done">Terminados</string>
+    <string name="activity_menu_option_day_1">20 Agosto</string>
+    <string name="activity_menu_option_day_2">21 Agosto</string>
+    <string name="error_0">Sem dados. Por favor conecta-te à internet e reinicia a aplicação</string>
+    <string name="recycler_error_no_activities">Sem Actividades</string>
+    <string name="activity_map_title">Mapa do Evento</string>
+</resources>

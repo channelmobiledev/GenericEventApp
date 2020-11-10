@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_day_1"
+        android:orderInCategory="100"
+        android:title="@string/activity_menu_option_day_1"
+        android:gravity="center_horizontal"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_day_2"
+        android:orderInCategory="200"
+        android:title="@string/activity_menu_option_day_2"
+        android:gravity="center_horizontal"
+        app:showAsAction="always" />
+</menu>
