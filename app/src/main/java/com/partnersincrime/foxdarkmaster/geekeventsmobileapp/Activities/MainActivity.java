@@ -75,14 +75,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         mMainTextLocation = (TextView) findViewById(R.id.main_text_location);
         mMainTextGreeting = (TextView) findViewById(R.id.main_text_greeting);
 
-        buttonActivities.setTypeface(Utils.getRegularFont(this));
-        buttonMap.setTypeface(Utils.getRegularFont(this));
-        buttonInformation.setTypeface(Utils.getRegularFont(this));
+//        buttonActivities.setTypeface(Utils.getRegularFont(this));
+//        buttonMap.setTypeface(Utils.getRegularFont(this));
+//        buttonInformation.setTypeface(Utils.getRegularFont(this));
 
-        mMainTextDays.setTypeface(Utils.getTitleFont(this));
-        mMainTextMonth.setTypeface(Utils.getTitleFont(this));
-        mMainTextLocation.setTypeface(Utils.getRegularBoldFont(this));
-        mMainTextGreeting.setTypeface(Utils.getRegularBoldFont(this));
+//        mMainTextDays.setTypeface(Utils.getTitleFont(this));
+//        mMainTextMonth.setTypeface(Utils.getTitleFont(this));
+//        mMainTextLocation.setTypeface(Utils.getRegularBoldFont(this));
+//        mMainTextGreeting.setTypeface(Utils.getRegularBoldFont(this));
 
         // TODO Temporarely hide information option
         buttonInformation.setVisibility(View.GONE);

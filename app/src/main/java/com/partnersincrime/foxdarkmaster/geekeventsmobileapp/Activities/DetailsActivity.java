@@ -59,11 +59,11 @@ public class DetailsActivity extends AppCompatActivity {
             mDescriptionView.setText(Html.fromHtml(activity.getDescr()));
         }
 
-        mTitleView.setTypeface(Utils.getTitleFont(this));
-        mLocationView.setTypeface(Utils.getSubTitleFont(this));
-        mTimeStartView.setTypeface(Utils.getRegularBoldFont(this));
-        mTimeEndView.setTypeface(Utils.getRegularBoldFont(this));
-        mDescriptionView.setTypeface(Utils.getRegularFont(this));
+//        mTitleView.setTypeface(Utils.getTitleFont(this));
+//        mLocationView.setTypeface(Utils.getSubTitleFont(this));
+//        mTimeStartView.setTypeface(Utils.getRegularBoldFont(this));
+//        mTimeEndView.setTypeface(Utils.getRegularBoldFont(this));
+//        mDescriptionView.setTypeface(Utils.getRegularFont(this));
 
         if (activity.hasImages()) {
             imageUrl = Utils.getUrlForImage(activity.getImage());
