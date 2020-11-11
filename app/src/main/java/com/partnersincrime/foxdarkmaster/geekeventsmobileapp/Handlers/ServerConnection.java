@@ -27,13 +27,11 @@ import okhttp3.Response;
  */
 public class ServerConnection {
     private final static int TIMEOUT= 20000;
-    public final static String SERVER_URL = "http://www.mangacomicevent.pt";
-    //public final static String SERVER_URL = "http://192.168.1.118:8600";
+//    public final static String SERVER_URL = "http://www.mangacomicevent.pt";
+    public final static String SERVER_URL = "http://192.168.0.13:8000";
 
     private static final String TAG = "ServerConnection";
-
-    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
-
+    
     private static String queryBuilder(String token, String method, String source, String param){
         //final String formattedDate = dateFormat.format(new Date());
 
