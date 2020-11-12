@@ -84,10 +84,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 //        mMainTextLocation.setTypeface(Utils.getRegularBoldFont(this));
 //        mMainTextGreeting.setTypeface(Utils.getRegularBoldFont(this));
 
-        // TODO Temporarely hide information option
-        buttonInformation.setVisibility(View.GONE);
-
-
         buttonActivities.setOnClickListener(this);
         buttonMap.setOnClickListener(this);
         buttonInformation.setOnClickListener(this);

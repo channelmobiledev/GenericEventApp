@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">MCE 2016</string>
     <string name="action_settings">Settings</string>
@@ -10,11 +11,11 @@
     <string name="fragment_title_done">Done</string>
     <string name="activity_menu_option_day_1">20 August</string>
     <string name="activity_menu_option_day_2">21 August</string>
-
-    // Erros - Internal 0
     <string name="error_0">No data. Please connect to internet and restart the app</string>
     <string name="recycler_error_no_activities">No Activities</string>
     <string name="app_full_title" translatable="false">Manga Comic Event</string>
     <string name="activity_map_title">Event Map</string>
-
+    <string name="home_activities">Activities</string>
+    <string name="home_map">Check Map</string>
+    <string name="home_info">Information</string>
 </resources>
