@@ -2,14 +2,10 @@ package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Handlers;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by foxdarkmaster on 12-08-2016.
- */
 public class DataTask extends AsyncTask<Object, Void, JSONObject> {
     private static final String TAG = "DataTask";
 
