@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">MCE 2016</string>
+    <string name="app_name" translatable="false">Generic Event App</string>
     <string name="action_settings">Settings</string>
     <string name="readMore">Read More</string>
     <string name="title_activity_activity_next_fragment">Next</string>
