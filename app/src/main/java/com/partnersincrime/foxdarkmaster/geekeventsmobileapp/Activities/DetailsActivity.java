@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +12,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.ActivitiesManager;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.ActivityModel;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Utilities.Utils;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -59,17 +57,14 @@ public class DetailsActivity extends AppCompatActivity {
             mDescriptionView.setText(Html.fromHtml(activity.getDescr()));
         }
 
-//        mTitleView.setTypeface(Utils.getTitleFont(this));
-//        mLocationView.setTypeface(Utils.getSubTitleFont(this));
-//        mTimeStartView.setTypeface(Utils.getRegularBoldFont(this));
-//        mTimeEndView.setTypeface(Utils.getRegularBoldFont(this));
-//        mDescriptionView.setTypeface(Utils.getRegularFont(this));
+        imageUrl = "https://source.unsplash.com/random/800x600";
 
-        if (activity.hasImages()) {
-            imageUrl = Utils.getUrlForImage(activity.getImage());
-        } else {
-            imageUrl = "http://dummyimage.com/vga";
-        }
+//        TODO Review this piece of code
+//        if (activity.hasImages()) {
+//            imageUrl = Utils.getUrlForImage(activity.getImage());
+//        } else {
+//            imageUrl = "https://source.unsplash.com/random/800x600";
+//        }
 
         Glide
             .with(this)
@@ -85,7 +80,12 @@ public class DetailsActivity extends AppCompatActivity {
         mTimeEndView = (TextView) findViewById(R.id.detail_card_hour_end);
         mLocationView = (TextView) findViewById(R.id.detail_card_location);
         mImageView = (ImageView) findViewById(R.id.detail_card_image);
-
         mDescriptionView = (TextView) findViewById(R.id.detail_card_description);
+
+        //        mTitleView.setTypeface(Utils.getTitleFont(this));
+        //        mLocationView.setTypeface(Utils.getSubTitleFont(this));
+        //        mTimeStartView.setTypeface(Utils.getRegularBoldFont(this));
+        //        mTimeEndView.setTypeface(Utils.getRegularBoldFont(this));
+        //        mDescriptionView.setTypeface(Utils.getRegularFont(this));
     }
 }
