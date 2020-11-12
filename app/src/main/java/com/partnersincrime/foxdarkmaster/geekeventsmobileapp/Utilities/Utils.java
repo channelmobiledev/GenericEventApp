@@ -7,7 +7,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.util.Log;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Handlers.ServerConnection;
 
@@ -15,11 +14,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.regex.Pattern;
 
-/**
- * Created by foxdarkmaster on 18-07-2016.
- */
 public class Utils {
     public static int DAY_ONE_OF_EVENT = 20;
     public static int DAY_TWO_OF_EVENT = 21;
@@ -236,19 +231,20 @@ public class Utils {
         return false;
     }
 
-    public static Typeface getTitleFont(Context context) {
-        return Typeface.createFromAsset(context.getAssets(), "fonts/Azo Sans Uber W01 Regular.otf");
-    }
-
-    public static Typeface getSubTitleFont(Context context) {
-        return Typeface.createFromAsset(context.getAssets(), "fonts/Rui Abreu - AzoSans-Medium.otf");
-    }
-
-    public static Typeface getRegularFont(Context context) {
-        return Typeface.createFromAsset(context.getAssets(), "fonts/Rui Abreu - AzoSans-Light.otf");
-    }
-
-    public static Typeface getRegularBoldFont(Context context) {
-        return Typeface.createFromAsset(context.getAssets(), "fonts/Rui Abreu - AzoSans-Bold.otf");
-    }
+//    TODO Refactor custom font stuff
+//    public static Typeface getTitleFont(Context context) {
+//        return Typeface.createFromAsset(context.getAssets(), "fonts/Azo Sans Uber W01 Regular.otf");
+//    }
+//
+//    public static Typeface getSubTitleFont(Context context) {
+//        return Typeface.createFromAsset(context.getAssets(), "fonts/Rui Abreu - AzoSans-Medium.otf");
+//    }
+//
+//    public static Typeface getRegularFont(Context context) {
+//        return Typeface.createFromAsset(context.getAssets(), "fonts/Rui Abreu - AzoSans-Light.otf");
+//    }
+//
+//    public static Typeface getRegularBoldFont(Context context) {
+//        return Typeface.createFromAsset(context.getAssets(), "fonts/Rui Abreu - AzoSans-Bold.otf");
+//    }
 }
