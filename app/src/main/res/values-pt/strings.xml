@@ -13,4 +13,7 @@
     <string name="error_0">Sem dados. Por favor conecta-te à internet e reinicia a aplicação</string>
     <string name="recycler_error_no_activities">Sem Actividades</string>
     <string name="activity_map_title">Mapa do Evento</string>
+    <string name="home_activities">Actividades</string>
+    <string name="home_map">Ver Mapa</string>
+    <string name="home_info">Informação</string>
 </resources>
