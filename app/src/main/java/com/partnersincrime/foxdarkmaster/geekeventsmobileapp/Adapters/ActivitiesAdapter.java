@@ -2,7 +2,6 @@ package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +14,10 @@ import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Activities.DetailsA
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.ActivitiesManager;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.ActivityModel;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Utilities.Utils;
 
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by foxdarkmaster on 07-07-2016.
- */
 public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.ViewHolder> {
     private List<ActivityModel> activitiesList;
 
@@ -45,12 +40,16 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
         holder.mTimeStartView.setText(activityData.getStart().split(" ")[1]);
         holder.mLocationView.setText(activityData.getPlace());
 
-        if (activityData.hasImages()) {
-            imageUrl = Utils.getUrlForImage(activityData.getImage());
-        } else {
-            imageUrl = "http://dummyimage.com/vga";
-        }
+        imageUrl = "https://source.unsplash.com/random/800x600";
 
+//        TODO Review this piece of code. Refactor with DetailsActivity to remove code duplication
+//        if (activity.hasImages()) {
+//            imageUrl = Utils.getUrlForImage(activity.getImage());
+//        } else {
+//            imageUrl = "https://source.unsplash.com/random/800x600";
+//        }
+
+//        TODO Refactor the custom font stuff
 //        holder.mTitleView.setTypeface(Utils.getTitleFont(holder.mTitleView.getContext()));
 //        holder.mTimeStartView.setTypeface(Utils.getRegularBoldFont(holder.mTimeStartView.getContext()));
 //        holder.mLocationView.setTypeface(Utils.getRegularFont(holder.mLocationView.getContext()));
