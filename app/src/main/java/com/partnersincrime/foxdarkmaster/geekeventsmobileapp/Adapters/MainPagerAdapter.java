@@ -11,9 +11,6 @@ import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Fragments.MainFragm
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by foxdarkmaster on 16-08-2016.
- */
 public class MainPagerAdapter extends FragmentStatePagerAdapter {
     private List<MainFragment> mFragmentList;
     Context context;
