@@ -3,8 +3,6 @@ package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Activities;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
-import com.google.gson.Gson;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Handlers.DataTask;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.ActivitiesManager;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.SPManager;
@@ -20,17 +17,16 @@ import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.ActivityMode
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Utilities.Utils;
 
-import io.fabric.sdk.android.Fabric;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener, DataTask.IConnectionListener {
 
     private static final String TAG = "MainActivity";
 
     private AsyncTask task;
-
-    private Toolbar toolbar;
 
     private Button buttonActivities;
     private Button buttonMap;
@@ -53,7 +49,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         setContentView(R.layout.main_activity_menu);
 
         getOnlineData();
-        setupInterface();
+        setupView();
     }
 
     private void getOnlineData() {
@@ -65,20 +61,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         }
     }
 
-    private void setupInterface() {
+    private void setupView() {
         buttonActivities = (Button) findViewById(R.id.buttonActivities);
         buttonMap = (Button) findViewById(R.id.buttonMap);
         buttonInformation = (Button) findViewById(R.id.buttonInfo);
-        //
         mMainTextDays = (TextView) findViewById(R.id.main_text_event_days);
         mMainTextMonth = (TextView) findViewById(R.id.main_text_event_month);
         mMainTextLocation = (TextView) findViewById(R.id.main_text_location);
         mMainTextGreeting = (TextView) findViewById(R.id.main_text_greeting);
 
+//        TODO Refactor the custom font stuff
 //        buttonActivities.setTypeface(Utils.getRegularFont(this));
 //        buttonMap.setTypeface(Utils.getRegularFont(this));
 //        buttonInformation.setTypeface(Utils.getRegularFont(this));
-
 //        mMainTextDays.setTypeface(Utils.getTitleFont(this));
 //        mMainTextMonth.setTypeface(Utils.getTitleFont(this));
 //        mMainTextLocation.setTypeface(Utils.getRegularBoldFont(this));
@@ -115,14 +110,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     }
 
     private boolean checkIfDataIsPresent() {
-        ActivityModel activitiesDay1[] = ActivitiesManager.getInstance().getRawDataDay1();
-        ActivityModel activitiesDay2[] = ActivitiesManager.getInstance().getRawDataDay2();
-
-        if (activitiesDay1 != null && activitiesDay2 != null) {
-            return true;
-        } else {
-            return false;
-        }
+        ActivityModel[] activitiesDay1 = ActivitiesManager.getInstance().getRawDataDay1();
+        ActivityModel[] activitiesDay2 = ActivitiesManager.getInstance().getRawDataDay2();
+        return activitiesDay1 != null && activitiesDay2 != null;
     }
 
     @Override
@@ -152,9 +142,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 
     @Override
     public void onError(int code) {
-        // TODO Hide progress bar
         Log.d(TAG, "DEBUG onError: " + code);
-
         setupData();
     }
 }

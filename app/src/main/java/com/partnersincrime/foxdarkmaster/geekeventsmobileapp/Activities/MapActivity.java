@@ -10,9 +10,6 @@ import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
-/**
- * Created by foxdarkmaster on 01-07-2016.
- */
 public class MapActivity extends BaseActivity {
     private ImageView mImageView;
     private PhotoViewAttacher mAttacher;

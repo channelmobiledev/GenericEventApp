@@ -8,17 +8,12 @@ import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.ActivityMode
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Utilities.Utils;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
-/**
- * Created by foxdarkmaster on 09-08-2016.
- */
 public class ActivitiesManager {
     private static final String TAG = "AManager";
-    private ActivityModel day1[];
-    private ActivityModel day2[];
+    private ActivityModel[] day1;
+    private ActivityModel[] day2;
     private Context currentContent;
     private int currentDay;
 
@@ -31,8 +26,6 @@ public class ActivitiesManager {
     }
 
     private ActivitiesManager() { }
-
-    // TODO Working
 
     public void setCurrentContent(Context content) {
         this.currentContent = content;
@@ -98,18 +91,6 @@ public class ActivitiesManager {
                 (Utils.isTodayDay1OfEvent() && getActivitiesSelectedDay() == 2) ||
                 (Utils.isTodayDay2OfEvent() && getActivitiesSelectedDay() == 1)
                 ) {
-
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-            Log.d(TAG, "DEBUG Should be here");
-
             return resultArray;
         } else {
             for (ActivityModel activity : listOfActivitiesOfToday) {
@@ -122,16 +103,14 @@ public class ActivitiesManager {
                     listOfNextActivities.add(activity);
                 }
             }
-
             resultArray = new ActivityModel[ listOfNextActivities.size() ];
             listOfNextActivities.toArray( resultArray );
-
             return resultArray;
         }
     }
 
     public ActivityModel[] getCurrentActivitiesData() {
-        ActivityModel listOfActivitiesOfToday[];
+        ActivityModel[] listOfActivitiesOfToday;
         ActivityModel[] resultArray = new ActivityModel[0];
         List<ActivityModel> listOfNextActivities = new ArrayList<>();
         String activityStartTime;
@@ -167,7 +146,7 @@ public class ActivitiesManager {
     }
 
     public ActivityModel[] getDoneActivitiesData() {
-        ActivityModel listOfActivitiesOfToday[];
+        ActivityModel[] listOfActivitiesOfToday;
         ActivityModel[] resultArray = new ActivityModel[0];
         List<ActivityModel> listOfNextActivities = new ArrayList<>();
         String activityTime;

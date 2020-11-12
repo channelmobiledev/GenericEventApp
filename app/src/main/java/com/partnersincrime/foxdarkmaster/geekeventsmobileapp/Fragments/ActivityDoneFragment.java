@@ -10,16 +10,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters.ActivitiesAdapter;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters.MainPagerAdapter;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.ActivitiesManager;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.ActivityModel;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
 
 import java.util.Arrays;
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class ActivityDoneFragment extends Fragment {
     View rootView;
     TextView mEmptyView;
@@ -55,7 +51,6 @@ public class ActivityDoneFragment extends Fragment {
             mRecyclerView.setVisibility(View.VISIBLE);
             mEmptyView.setVisibility(View.GONE);
 
-            //mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_activities);
             mRecyclerView.setHasFixedSize(true);
 
             mLayoutManager = new LinearLayoutManager(getActivity());
