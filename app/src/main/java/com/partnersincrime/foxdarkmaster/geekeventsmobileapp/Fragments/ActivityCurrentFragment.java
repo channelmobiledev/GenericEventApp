@@ -10,23 +10,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters.ActivitiesAdapter;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters.MainPagerAdapter;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.ActivitiesManager;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.ActivityModel;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
 
 import java.util.Arrays;
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class ActivityCurrentFragment extends Fragment {
     View rootView;
     TextView mEmptyView;
     RecyclerView mRecyclerView;
     LinearLayoutManager mLayoutManager;
     ActivitiesAdapter mAdapter;
-    ActivityModel currentDay[];
+    ActivityModel[] currentDay;
 
     public ActivityCurrentFragment() {
     }

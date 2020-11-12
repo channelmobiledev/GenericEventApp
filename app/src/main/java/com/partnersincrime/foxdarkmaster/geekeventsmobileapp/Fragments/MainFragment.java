@@ -1,11 +1,9 @@
 package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Fragments;
 
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +16,6 @@ import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
 
 import java.util.Arrays;
 
-import static com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Utilities.Utils.decodeSampledBitmapFromResource;
-
-/**
- * Created by foxdarkmaster on 16-08-2016.
- */
 public class MainFragment extends Fragment {
     public static final int TYPE_NEXT = 0;
     public static final int TYPE_CURRENT = 1;
@@ -38,7 +31,7 @@ public class MainFragment extends Fragment {
     RecyclerView mRecyclerView;
     LinearLayoutManager mLayoutManager;
     ActivitiesAdapter mAdapter;
-    ActivityModel currentDay[];
+    ActivityModel[] currentDay;
 
     private int mType;
     private String title;
@@ -110,11 +103,6 @@ public class MainFragment extends Fragment {
 
         return rootView;
     }
-
-    private Bitmap getTempImage() {
-        return decodeSampledBitmapFromResource(getResources(), R.drawable.dummy, 400, 200);
-    }
-
 
     public String getTitle() {
         if (title == null) {
