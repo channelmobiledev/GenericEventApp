@@ -1,13 +1,7 @@
 package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers;
 
 import android.content.Context;
-import android.content.res.Configuration;
 
-import java.util.Locale;
-
-/**
- * Created by foxdarkmaster on 19-06-2016.
- */
 public class LocaleManager {
     private static final String TAG = "LOCALE-MANAGER";
 
