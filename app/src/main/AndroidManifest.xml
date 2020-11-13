@@ -56,10 +56,6 @@
                 android:value="com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Activities.ActivityContainerActivities" />
         </activity>
         <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="b00976b752326bde7f3c645a1fb1489e20d11a35" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
     </application>
