@@ -1,7 +1,7 @@
 package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Activities;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
 

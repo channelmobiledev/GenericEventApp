@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Handlers.DataTask;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.ActivitiesManager;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.SPManager;
@@ -19,8 +18,6 @@ import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Utilities.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener, DataTask.IConnectionListener {
 
@@ -45,7 +42,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.main_activity_menu);
 
         getOnlineData();
