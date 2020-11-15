@@ -1,73 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="0dp"
-    android:background="@color/colorBackground"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground">
 
-    <include layout="@layout/layout_main_navigation"/>
+    <include
+        android:id="@+id/activity_toolbar"
+        layout="@layout/layout_main_navigation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
-    <LinearLayout
-        android:id="@+id/main_navigation_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/primary_material_light"
-        android:orientation="vertical">
-
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorBackground"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/main_margin_distances"
-            android:paddingBottom="@dimen/main_margin_distances"
-            android:paddingLeft="@dimen/main_margin_sides"
-            android:paddingRight="@dimen/main_margin_sides"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/activity_toolbar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_info_event"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:textAllCaps="true"
-                android:textColor="#fff"
-                android:textSize="30dp"
-                android:text="20 e 21 de Agosto"
-                 />
+                android:layout_margin="20dp"
+                >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:paddingTop="5dp"
-                android:paddingBottom="20dp"
-                android:textAllCaps="true"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:textSize="18dp"
-                android:text="Escola de Hotelaria e Turismo do Algarve, Faro"
-                />
+                <ImageView
+                    android:id="@+id/activity_info_event_logo"
+                    android:src="@drawable/logo_mce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:scaleType="fitStart"
+                    />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:textAllCaps="true"
-                android:textColor="#fff"
-                android:textSize="20dp"
-                android:text="Bem vindo ao maior evento cultural do algarve"
-                />
+                <TextView
+                    android:id="@+id/activity_info_event_description_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_info_event_logo"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:text="When"
+                    />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/activity_info_event_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_info_event_description_duration"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    android:textSize="30sp"
+                    android:text="From 20 of August 8:00am to 21 of August 19:00pm"
+                    />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/activity_info_event_description_tickets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_info_event_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:text="Tickets"
+                    />
 
-</RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activity_info_tickets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_info_event_description_tickets"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:overScrollMode="never"
+                    tools:listitem="@layout/card_ticket_type"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
