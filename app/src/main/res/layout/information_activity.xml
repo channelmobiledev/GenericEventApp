@@ -87,6 +87,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     android:overScrollMode="never"
+                    android:nestedScrollingEnabled="true"
                     tools:listitem="@layout/card_ticket_type"
                     />
 

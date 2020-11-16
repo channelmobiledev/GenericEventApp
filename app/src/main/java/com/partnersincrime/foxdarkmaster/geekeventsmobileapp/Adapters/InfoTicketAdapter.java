@@ -6,29 +6,47 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.TicketModel;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
+
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Currency;
 
 
 public class InfoTicketAdapter extends RecyclerView.Adapter<InfoTicketAdapter.ViewHolder>  {
 
-    private String[] TicketData;
+    private ArrayList<TicketModel> TicketData;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView textView;
+        private final TextView mNameTv;
+        private final TextView mDescriptionTv;
+        private final TextView mPriceTv;
 
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
 
-            textView = (TextView) view.findViewById(R.id.textView);
+            mNameTv = (TextView) view.findViewById(R.id.card_ticket_type_name);
+            mDescriptionTv = (TextView) view.findViewById(R.id.card_ticket_type_description);
+            mPriceTv = (TextView) view.findViewById(R.id.card_ticket_type_price);
         }
 
-        public TextView getTextView() {
-            return textView;
+        public TextView getNameView() {
+            return mNameTv;
+        }
+
+        public TextView getDescriptionView() {
+            return mDescriptionTv;
+        }
+
+        public TextView getPriceView() {
+            return mPriceTv;
         }
     }
 
-    public InfoTicketAdapter(String[] dataSet) {
+    public InfoTicketAdapter(ArrayList<TicketModel> dataSet) {
         TicketData = dataSet;
     }
 
@@ -42,13 +60,18 @@ public class InfoTicketAdapter extends RecyclerView.Adapter<InfoTicketAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+        TicketModel mDataModel = TicketData.get(position);
 
+        NumberFormat mCurrencyFormat = NumberFormat.getCurrencyInstance();
+        mCurrencyFormat.setCurrency(Currency.getInstance(mDataModel.getCurrency()));
 
-        viewHolder.getTextView().setText(TicketData[position]);
+        viewHolder.getNameView().setText(mDataModel.getName());
+        viewHolder.getDescriptionView().setText(mDataModel.getDescription());
+        viewHolder.getPriceView().setText(mCurrencyFormat.format(mDataModel.getPrice()));
     }
 
     @Override
     public int getItemCount() {
-        return TicketData.length;
+        return TicketData.size();
     }
 }

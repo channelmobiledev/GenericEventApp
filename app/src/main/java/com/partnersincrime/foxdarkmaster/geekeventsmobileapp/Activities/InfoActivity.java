@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters.InfoTicketAdapter;
+import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Models.TicketModel;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
+
+import java.util.ArrayList;
 
 public class InfoActivity extends BaseActivity {
 
@@ -15,7 +18,7 @@ public class InfoActivity extends BaseActivity {
     protected RecyclerView.LayoutManager mLayoutManager;
     protected InfoTicketAdapter mAdapter;
 
-    protected String[] mDataset;
+    protected ArrayList<TicketModel> mDataset;
 
     @Override
     protected int getLayoutResource() {
@@ -27,17 +30,16 @@ public class InfoActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.information_activity);
 
-
         setupDemoData();
         setupView();
-
     }
 
     private void setupDemoData() {
-        mDataset = new String[30];
-        for (int i = 0; i < 30; i++) {
-            mDataset[i] = "This is element #" + i;
-        }
+        mDataset = new ArrayList<TicketModel>() {{
+          add(new TicketModel("One day ticket", "Access day 1 event", 5.00, "EUR"));
+          add(new TicketModel("Two day ticket", "Access day 2 event", 8.00, "EUR"));
+          add(new TicketModel("Digital Deluxe Ticket", "Access the whole event", 9.99, "EUR"));
+        }};
     }
 
     private void setupView() {
