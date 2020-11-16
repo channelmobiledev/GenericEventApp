@@ -26,7 +26,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/activity_info_event"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_margin="20dp"
                 >
 
@@ -87,7 +87,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     android:overScrollMode="never"
-                    android:nestedScrollingEnabled="true"
+
                     tools:listitem="@layout/card_ticket_type"
                     />
 
