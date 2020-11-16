@@ -3,11 +3,7 @@ package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
-/**
- * Created by foxdarkmaster on 19-06-2016.
- */
 public class SPManager {
     private static final String KEY_ACTIVITIES = "activities";
     private static final String KEY_LOCALE = "locale";
@@ -46,9 +42,6 @@ public class SPManager {
     }
 
     */
-
-    // TODO Working
-    // TODO ---------------------------------
 
     public static void setActivitiesByDay(final Context context, final int day, final String activitiesList) {
         SharedPreferences.Editor editor = getDefaultSharedPreferences(context).edit();

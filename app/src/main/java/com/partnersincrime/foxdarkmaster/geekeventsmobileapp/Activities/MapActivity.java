@@ -3,16 +3,13 @@ package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Activities;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.widget.ImageView;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
-/**
- * Created by foxdarkmaster on 01-07-2016.
- */
 public class MapActivity extends BaseActivity {
     private ImageView mImageView;
     private PhotoViewAttacher mAttacher;

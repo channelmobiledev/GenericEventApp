@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAllCaps="true"
-            android:text="Actividades"
+            android:text="@string/home_activities"
             android:textColor="#fff"
             android:background="@drawable/mainbuttonshape"
             />
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAllCaps="true"
-            android:text="Ver Mapa"
+            android:text="@string/home_map"
             android:textColor="#fff"
             android:background="@drawable/mainbuttonshape"
             />
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAllCaps="true"
-            android:text="Informações"
+            android:text="@string/home_info"
             android:textColor="#fff"
             android:background="@drawable/mainbuttonshape"
             />

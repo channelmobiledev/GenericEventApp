@@ -1,31 +1,20 @@
 package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Activities;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.NavUtils;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import com.google.android.material.tabs.TabLayout;
+import androidx.core.app.NavUtils;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters.MainPagerAdapter;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Fragments.ActivityCurrentFragment;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Fragments.ActivityDoneFragment;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Fragments.ActivityNextFragment;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Fragments.MainFragment;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.ActivitiesManager;
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.R;
-import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by foxdarkmaster on 29-07-2016.
- */
+import java.util.ArrayList;
+
 public class ActivityContainerActivities extends BaseActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -40,7 +29,6 @@ public class ActivityContainerActivities extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_activity_container, menu);
-
         return true;
     }
 
@@ -48,7 +36,6 @@ public class ActivityContainerActivities extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activities_swipe_with_tabs);
-
         setViews();
         setActionBar();
     }
@@ -63,10 +50,9 @@ public class ActivityContainerActivities extends BaseActivity {
 
     private void setViews() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         setupViewPager();
-
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
 
@@ -79,12 +65,10 @@ public class ActivityContainerActivities extends BaseActivity {
             case R.id.action_day_1:
                 ActivitiesManager.getInstance().setActivitiesSelectedDay(1);
                 pagerAdapter.setNewData();
-
                 return true;
             case R.id.action_day_2:
                 ActivitiesManager.getInstance().setActivitiesSelectedDay(2);
                 pagerAdapter.setNewData();
-
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -94,14 +78,11 @@ public class ActivityContainerActivities extends BaseActivity {
     @Override
     public void onResume() {
         super.onResume();
-
         pagerAdapter.setNewData();
     }
 
     private void setupViewPager() {
-
         ArrayList<MainFragment> objs = new ArrayList<>();
-
         objs.add(MainFragment.newInstance(
                 MainFragment.TYPE_NEXT, getResources().getString(R.string.fragment_title_next)));
         objs.add(MainFragment.newInstance(

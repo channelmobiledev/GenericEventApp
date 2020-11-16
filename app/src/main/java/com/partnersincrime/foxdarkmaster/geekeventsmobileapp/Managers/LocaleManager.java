@@ -1,18 +1,12 @@
 package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers;
 
 import android.content.Context;
-import android.content.res.Configuration;
 
-import java.util.Locale;
-
-/**
- * Created by foxdarkmaster on 19-06-2016.
- */
 public class LocaleManager {
     private static final String TAG = "LOCALE-MANAGER";
 
     public static void loadLocale(Context context) {
-        setLocale(context, "pt");
+        //setLocale(context, "pt");
 
         /*
         if (getCurrentLocale(context).startsWith("pt")){
@@ -27,12 +21,12 @@ public class LocaleManager {
         // Override settings SPManager.setLocale(context, locale);
         //SPManager.setLocale(context, locale);
         //Locale loc = new Locale(locale);
-        SPManager.setLocale(context, "pt");
-        Locale loc = new Locale("pt");
-        Locale.setDefault(loc);
-        Configuration cfg = new Configuration();
-        cfg.locale = loc;
-        context.getResources().updateConfiguration(cfg, null);
+        //SPManager.setLocale(context, "pt");
+        //Locale loc = new Locale("pt");
+        //Locale.setDefault(loc);
+        //Configuration cfg = new Configuration();
+        //cfg.locale = loc;
+        //context.getResources().updateConfiguration(cfg, null);
     }
 
     public static String getCurrentLocale(Context context){

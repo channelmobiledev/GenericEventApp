@@ -3,37 +3,25 @@ package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Handlers;
 import android.content.Context;
 import android.util.Log;
 
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.LocaleManager;
-import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Managers.SPManager;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.FormBody;
-import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-/**
- * Created by foxdarkmaster on 12-08-2016.
- */
 public class ServerConnection {
     private final static int TIMEOUT= 20000;
-    public final static String SERVER_URL = "http://www.mangacomicevent.pt";
-    //public final static String SERVER_URL = "http://192.168.1.118:8600";
+//    public final static String SERVER_URL = "http://www.mangacomicevent.pt";
+    public final static String SERVER_URL = "http://192.168.0.13:8000";
 
     private static final String TAG = "ServerConnection";
-
-    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
-
+    
     private static String queryBuilder(String token, String method, String source, String param){
         //final String formattedDate = dateFormat.format(new Date());
 

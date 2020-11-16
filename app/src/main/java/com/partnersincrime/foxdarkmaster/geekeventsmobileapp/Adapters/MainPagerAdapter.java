@@ -1,19 +1,15 @@
 package com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Adapters;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.util.Log;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.partnersincrime.foxdarkmaster.geekeventsmobileapp.Fragments.MainFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by foxdarkmaster on 16-08-2016.
- */
 public class MainPagerAdapter extends FragmentStatePagerAdapter {
     private List<MainFragment> mFragmentList;
     Context context;
