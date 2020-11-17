@@ -6,12 +6,14 @@ public class TicketModel {
     private final String description;
     private final double price;
     private final String currency;
+    private final String buyAddress;
 
-    public TicketModel(String name, String description, double price, String currency) {
+    public TicketModel(String name, String description, double price, String currency, String buyAddress) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.currency = currency;
+        this.buyAddress = buyAddress;
     }
 
     public String getName() {
@@ -30,4 +32,7 @@ public class TicketModel {
         return currency;
     }
 
+    public String getBuyAddress() {
+        return buyAddress;
+    }
 }

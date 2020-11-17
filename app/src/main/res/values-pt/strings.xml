@@ -18,4 +18,5 @@
     <string name="home_info">Informação</string>
     <string name="info_when_title">Quando</string>
     <string name="info_tickers_title">Bilhetes</string>
+    <string name="card_ticket_buy_bt">Comprar Agora</string>
 </resources>
