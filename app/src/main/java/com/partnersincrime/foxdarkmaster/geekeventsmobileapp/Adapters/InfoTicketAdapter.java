@@ -17,7 +17,7 @@ import java.util.Currency;
 
 public class InfoTicketAdapter extends RecyclerView.Adapter<InfoTicketAdapter.ViewHolder>  {
 
-    private ArrayList<TicketModel> TicketData;
+    private final ArrayList<TicketModel> TicketData;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView mNameTv;

@@ -35,8 +35,6 @@
                 android:src="@drawable/logo_mce"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:scaleType="fitStart"
                 />
 
@@ -44,74 +42,43 @@
                 android:id="@+id/activity_info_event_description_duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/activity_info_event_logo"
-                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:text="When"
+                android:text="@string/info_when_title"
                 />
 
             <TextView
                 android:id="@+id/activity_info_event_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/activity_info_event_description_duration"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:textAllCaps="true"
                 android:textColor="#fff"
                 android:textSize="30sp"
-                android:text="From 20 of August 8:00am to 21 of August 19:00pm"
+                android:text="TODO NEEDS TO BE REPLACED IN THE ACTIVITY - From 20 of August 8:00am to 21 of August 19:00pm"
                 />
 
             <TextView
                 android:id="@+id/activity_info_event_description_tickets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/activity_info_event_name"
-                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:text="Tickets"
+                android:text="@string/info_tickers_title"
                 />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activity_info_tickets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/activity_info_event_description_tickets"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
                 android:overScrollMode="never"
                 android:nestedScrollingEnabled="false"
                 tools:listitem="@layout/card_ticket_type"
-                />
-
-            <TextView
-                android:id="@+id/example1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/activity_info_tickets"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:textAllCaps="true"
-                android:textColor="#fff"
-                android:textSize="30sp"
-                android:text="From 20 of August 8:00am to 21 of August 19:00pm"
-                />
-
-            <TextView
-                android:id="@+id/example2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/example1"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:textAllCaps="true"
-                android:textColor="#fff"
-                android:textSize="30sp"
-                android:text="From 20 of August 8:00am to 21 of August 19:00pm"
                 />
 
         </LinearLayout>

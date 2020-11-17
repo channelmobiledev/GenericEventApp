@@ -18,4 +18,6 @@
     <string name="home_activities">Activities</string>
     <string name="home_map">Check Map</string>
     <string name="home_info">Information</string>
+    <string name="info_when_title">When</string>
+    <string name="info_tickers_title">Tickets</string>
 </resources>

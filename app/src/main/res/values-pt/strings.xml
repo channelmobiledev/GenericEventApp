@@ -16,4 +16,6 @@
     <string name="home_activities">Actividades</string>
     <string name="home_map">Ver Mapa</string>
     <string name="home_info">Informação</string>
+    <string name="info_when_title">Quando</string>
+    <string name="info_tickers_title">Bilhetes</string>
 </resources>
