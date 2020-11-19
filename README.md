@@ -1,4 +1,4 @@
-# Generic Event App
+# 📱 Generic Event App
 
 A generic application for events written in Java and Android.
 
