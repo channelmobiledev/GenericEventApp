@@ -38,3 +38,10 @@ This project relies on a Node.js backend to provide the data to the app.
 ## How to contribute
 
 - Send a private message to our [Twitter handler ](https://twitter.com/chanmobiledev)
+
+## Contributors
+
+- 🌟 [Miguel Costa](https://github.com/Painatalman) 🏗️📄 Original Backend, Frontend
+- 🌟 [Paulo David](https://github.com/rOcKpT) 🏗️ Original Backend
+- 🌟 [Daniel Caldeira](https://www.behance.net/danielcaldeira) 🎨 Original Designer
+- 🌟 [Alexio Rodrigues](https://github.com/alexiorodrigues/) 📱 Original Mobile
