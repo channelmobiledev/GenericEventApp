@@ -2,6 +2,8 @@
 
 A generic application for events written in Java and Android.
 
+![image](https://drive.google.com/uc?export=view&id=1ARf46QQieeOE8amDzAXG0FyJDJYLEFDL)
+
 ## Features
 
 - Shows activities, separated by what's going to happen, what's currently happening and what did happen.
